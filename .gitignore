@@ -484,3 +484,4 @@ $RECYCLE.BIN/
 # Build folders
 bin/
 obj/
+appsettings.json
