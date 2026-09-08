@@ -486,3 +486,6 @@ bin/
 obj/
 appsettings.json
 ClientApp/android/
+
+
+*.db
