@@ -23,13 +23,13 @@ CREATE TABLE Registrations (
 );
 
 INSERT INTO Organizers (Name, Email, PasswordHash) VALUES
-('Olena Kovalenko', 'olena@example.com', 'hashed_password_1'),
-('Maksym Ivanov', 'maksym@example.com', 'hashed_password_2');
+('Ivan Iliuk', 'ivan@gmil.com', 'hashed_password_1'),
+('Maksym reseller', 'reseller@Outlook.com', 'hashed_password_2');
 
 INSERT INTO Events (Name, Date, Location) VALUES
-('IT Conference', '2026-10-15', 'Kyiv'),
-('Music Festival', '2026-11-02', 'Lviv'),
-('Art Exhibition', '2026-09-20', 'Odesa');
+('pick a peach', '2026-9-15', 'Kyiv'),
+('pick a plum', '2026-10-02', 'Lviv'),
+('pick a nectarine', '2026-07-20', 'Odesa');
 
 INSERT INTO Registrations (OrganizerID, EventID, ParticipantName, Status) VALUES
 (1, 1, 'Andrii Petrenko', 'Confirmed'),
