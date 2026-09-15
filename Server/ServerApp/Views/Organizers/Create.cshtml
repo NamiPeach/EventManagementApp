@@ -1,0 +1,24 @@
+@model Organizer
+
+@{
+    ViewData["Title"] = "Додати організатора";
+}
+
+<h2>Додати організатора</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label">Ім'я</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Пароль (буде збережено як є — навчальний проєкт)</label>
+        <input asp-for="PasswordHash" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>

@@ -1,0 +1,32 @@
+@model List<Organizer>
+
+@{
+    ViewData["Title"] = "Організатори";
+}
+
+<h2>Організатори</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Додати організатора</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ім'я</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-secondary">Редагувати</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">Видалити</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

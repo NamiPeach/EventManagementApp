@@ -1,0 +1,22 @@
+@model Organizer
+
+@{
+    ViewData["Title"] = "Видалити організатора";
+}
+
+<h2>Видалити організатора</h2>
+
+<p>Ти впевнений, що хочеш видалити цього організатора?</p>
+
+<dl class="row">
+    <dt class="col-sm-2">Ім'я</dt>
+    <dd class="col-sm-10">@Model.Name</dd>
+    <dt class="col-sm-2">Email</dt>
+    <dd class="col-sm-10">@Model.Email</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ID" />
+    <button type="submit" class="btn btn-danger">Видалити</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>

@@ -1,0 +1,25 @@
+@model Event
+
+@{
+    ViewData["Title"] = "Редагувати подію";
+}
+
+<h2>Редагувати подію</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ID" />
+    <div class="mb-3">
+        <label class="form-label">Назва</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Дата (РРРР-ММ-ДД)</label>
+        <input asp-for="Date" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Місце</label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>
