@@ -1,0 +1,28 @@
+@model Registration
+
+@{
+    ViewData["Title"] = "Додати реєстрацію";
+}
+
+<h2>Додати реєстрацію</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label">Подія</label>
+        <select asp-for="EventID" class="form-control" asp-items="ViewBag.Events"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Організатор</label>
+        <select asp-for="OrganizerID" class="form-control" asp-items="ViewBag.Organizers"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Ім'я учасника</label>
+        <input asp-for="ParticipantName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Статус</label>
+        <input asp-for="Status" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>

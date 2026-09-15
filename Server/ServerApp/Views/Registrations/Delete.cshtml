@@ -1,0 +1,26 @@
+@model Registration
+
+@{
+    ViewData["Title"] = "Видалити реєстрацію";
+}
+
+<h2>Видалити реєстрацію</h2>
+
+<p>Ти впевнений, що хочеш видалити цю реєстрацію?</p>
+
+<dl class="row">
+    <dt class="col-sm-2">Учасник</dt>
+    <dd class="col-sm-10">@Model.ParticipantName</dd>
+    <dt class="col-sm-2">Подія</dt>
+    <dd class="col-sm-10">@Model.Event?.Name</dd>
+    <dt class="col-sm-2">Організатор</dt>
+    <dd class="col-sm-10">@Model.Organizer?.Name</dd>
+    <dt class="col-sm-2">Статус</dt>
+    <dd class="col-sm-10">@Model.Status</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ID" />
+    <button type="submit" class="btn btn-danger">Видалити</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>
