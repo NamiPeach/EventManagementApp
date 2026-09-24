@@ -37,7 +37,7 @@ namespace ServerApp.Controllers
                     Expires = DateTimeOffset.UtcNow.AddHours(2)
                 });
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Registrations");
             }
 
             ViewBag.Error = "Невірний логін або пароль";
